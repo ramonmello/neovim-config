@@ -1,6 +1,6 @@
-require('plugins')
-require('settings')
-require('colorscheme')
-require('keybinds')
-require('lsp')
-
+require 'plugins'
+require 'settings'
+require 'colorscheme'
+require 'keybinds'
+require 'lsp'
+require 'null_ls_config'
