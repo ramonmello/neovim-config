@@ -35,7 +35,6 @@ return require('packer').startup({
     })
 
     use('morhetz/gruvbox')
-
     use('arcticicestudio/nord-vim')
 
     ---------------------------------
@@ -64,12 +63,17 @@ return require('packer').startup({
     -----------------------------------------------
 
     use('github/copilot.vim')
-
     use('neovim/nvim-lspconfig')
-
     use('ray-x/lsp_signature.nvim')
-
     use('jose-elias-alvarez/null-ls.nvim')
+
+    -- cmp configuration --
+    use('hrsh7th/cmp-nvim-lsp')
+    use('hrsh7th/cmp-buffer')
+    use('hrsh7th/cmp-path')
+    use('hrsh7th/cmp-cmdline')
+    use('hrsh7th/nvim-cmp')
+    use('onsails/lspkind.nvim')
 
     --------------------------------------------
     -- Treesitter: Better syntax highlighting --
