@@ -11,7 +11,7 @@ end
 -- Navigation and Fuzzy Search --
 ---------------------------------
 
-function toggle_nvim_tree()
+function Toggle_nvim_tree()
   local view = require'nvim-tree.view'
   local api = require'nvim-tree.api'
 
@@ -22,7 +22,7 @@ function toggle_nvim_tree()
   api.tree.toggle()
  end
 
-map('n', '<C-b>', '<cmd>lua toggle_nvim_tree()<CR>')
+map('n', '<C-b>', '<cmd>lua Toggle_nvim_tree()<CR>')
 
 ---------------------
 -- LSP, Formatting --
