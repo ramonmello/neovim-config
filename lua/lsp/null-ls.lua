@@ -1,7 +1,7 @@
 local null_ls_status_ok, null_ls = pcall(require, "null-ls")
 if not null_ls_status_ok then
   vim.notify("null-ls not installed", vim.log.levels.ERROR)
-	return
+  return
 end
 
 local formatting = null_ls.builtins.formatting
@@ -11,7 +11,8 @@ null_ls.setup({
   debug = false,
   sources = {
     formatting.prettier.with({
-      filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'yaml', 'markdown', 'html' },
+      filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'yaml',
+        'markdown', 'html' },
     }),
     diagnostics.eslint
   }
