@@ -11,9 +11,19 @@ null_ls.setup({
   debug = false,
   sources = {
     formatting.prettier.with({
-      filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'css', 'scss', 'json', 'yaml',
-        'markdown', 'html' },
+      filetypes = {
+        'javascript',
+        'javascriptreact',
+        'typescript',
+        'typescriptreact',
+        'css',
+        'scss',
+        'json',
+        'yaml',
+        'markdown',
+        'html'
+      },
     }),
-    diagnostics.eslint
+    diagnostics.eslint,
   }
 })

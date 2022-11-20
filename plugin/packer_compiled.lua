@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/home/ramonmello/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/ramonmello/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -176,15 +181,15 @@ time([[Defining packer_plugins]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-web-devicons ]]
-vim.cmd [[ packadd lualine.nvim ]]
-
--- Config for: lualine.nvim
-try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
-
 vim.cmd [[ packadd nvim-tree.lua ]]
 
 -- Config for: nvim-tree.lua
 try_loadstring("\27LJ\2\nz\0\0\4\0\b\0\v6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\4\0005\3\3\0=\3\5\0025\3\6\0=\3\a\2B\0\2\1K\0\1\0\ffilters\1\0\1\rdotfiles\1\tview\1\0\0\1\0\1\18adaptive_size\2\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
+
+vim.cmd [[ packadd lualine.nvim ]]
+
+-- Config for: lualine.nvim
+try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\flualine\frequire\0", "config", "lualine.nvim")
 
 time([[Sequenced loading]], false)
 

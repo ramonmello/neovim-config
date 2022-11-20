@@ -79,6 +79,11 @@ return require('packer').startup({
     -- Treesitter: Better syntax highlighting --
     --------------------------------------------
 
+    ---------------
+    -- Better UX --
+    ---------------
+
+    use('numToStr/Comment.nvim')
 
   end
 })
