@@ -5,5 +5,4 @@ end
 
 require 'lsp.lsp_signature'
 require 'lsp.lspconfig'
-require 'lsp.setup-cmp'
 require 'lsp.null-ls'
