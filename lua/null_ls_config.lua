@@ -10,20 +10,17 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
   debug = false,
   sources = {
-    formatting.prettier.with({
-      filetypes = {
-        'javascript',
-        'javascriptreact',
-        'typescript',
-        'typescriptreact',
-        'css',
-        'scss',
-        'json',
-        'yaml',
-        'markdown',
-        'html'
-      },
-    }),
-    diagnostics.eslint,
+    -- TS/JS
+    formatting.prettierd,
+    formatting.eslint_d,
+    diagnostics.eslint_d,
+
+    -- Dart
+    formatting.dart_format,
+
+    -- Go
+    formatting.gofmt,
+    formatting.goimports,
+    formatting.goimports_reviser
   }
 })

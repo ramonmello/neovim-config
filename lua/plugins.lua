@@ -65,7 +65,10 @@ return require('packer').startup({
     use('github/copilot.vim')
     use('neovim/nvim-lspconfig')
     use('ray-x/lsp_signature.nvim')
-    use('jose-elias-alvarez/null-ls.nvim')
+    use({
+      'jose-elias-alvarez/null-ls.nvim',
+      requires = { 'nvim-lua/plenary.nvim' }
+    })
 
     -- cmp configuration --
     use('hrsh7th/cmp-nvim-lsp')
