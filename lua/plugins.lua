@@ -78,6 +78,12 @@ return require('packer').startup({
     use('hrsh7th/nvim-cmp')
     use('onsails/lspkind.nvim')
 
+    -- Dart/Flutter configuration --
+   use('dart-lang/dart-vim-plugin')
+   use('thosakwe/vim-flutter')
+   use('natebosch/vim-lsc')
+   use('natebosch/vim-lsc-dart')
+
     --------------------------------------------
     -- Treesitter: Better syntax highlighting --
     --------------------------------------------

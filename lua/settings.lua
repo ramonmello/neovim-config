@@ -11,6 +11,3 @@ o.smarttab = true
 o.termguicolors = true
 o.cursorline = true
 o.cursorcolumn = true
-
--- LSP
-o.completeopt = 'menuone,noselect'
