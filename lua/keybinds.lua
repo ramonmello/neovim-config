@@ -6,21 +6,20 @@ local function map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
-
 ---------------------------------
 -- Navigation and Fuzzy Search --
 ---------------------------------
 
 function Toggle_nvim_tree()
-  local view = require'nvim-tree.view'
-  local api = require'nvim-tree.api'
+  local view = require 'nvim-tree.view'
+  local api = require 'nvim-tree.api'
 
   if view.is_visible() then
-    vim.cmd[[:NvimTreeFindFile]]
+    vim.cmd [[:NvimTreeFindFile]]
     return
   end
   api.tree.toggle()
- end
+end
 
 map('n', '<C-b>', '<cmd>lua Toggle_nvim_tree()<CR>')
 
@@ -30,4 +29,4 @@ map('n', '<C-b>', '<cmd>lua Toggle_nvim_tree()<CR>')
 
 map('n', '<M-f>', '<cmd>lua vim.lsp.buf.format{ async = true }<CR>')
 map('n', '<M-d>', '<cmd>lua vim.lsp.buf.definition()<CR>')
-
+map('i', '<M-a>', '<cmd> lua vim.lsp.buf.code_action()<CR>')

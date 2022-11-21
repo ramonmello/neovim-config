@@ -6,19 +6,16 @@ end
 
 local formatting = null_ls.builtins.formatting
 local diagnostics = null_ls.builtins.diagnostics
+local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
   debug = false,
   sources = {
-    -- TS/JS
     formatting.prettierd,
     formatting.eslint_d,
     diagnostics.eslint_d,
-
-    -- Dart
+    code_actions.refactoring,
     formatting.dart_format,
-
-    -- Go
     formatting.gofmt,
     formatting.goimports,
     formatting.goimports_reviser

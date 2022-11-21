@@ -13,14 +13,14 @@ return require('packer').startup({
     -- Package Manager --
     ---------------------
 
-    use('wbthomason/packer.nvim')
+    use 'wbthomason/packer.nvim'
 
     ----------------------
     -- Required plugins --
     ----------------------
 
-    use('nvim-tree/nvim-web-devicons')
-    use('nvim-lua/plenary.nvim')
+    use 'nvim-tree/nvim-web-devicons'
+    use 'nvim-lua/plenary.nvim'
 
     ----------------------------------------
     -- Theme, Icons, Statusbar, Bufferbar --
@@ -34,8 +34,8 @@ return require('packer').startup({
       end
     })
 
-    use('morhetz/gruvbox')
-    use('arcticicestudio/nord-vim')
+    use 'morhetz/gruvbox'
+    use 'arcticicestudio/nord-vim'
 
     ---------------------------------
     -- Navigation and Fuzzy Search --
@@ -56,43 +56,50 @@ return require('packer').startup({
       end
     })
 
-    use('nvim-telescope/telescope.nvim')
+    use 'nvim-telescope/telescope.nvim'
 
     -----------------------------------------------
     -- LSP, Formatting, Completions and Snippets --
     -----------------------------------------------
 
-    use('github/copilot.vim')
-    use('neovim/nvim-lspconfig')
-    use('ray-x/lsp_signature.nvim')
+    use 'github/copilot.vim'
+    use 'neovim/nvim-lspconfig'
+    use 'ray-x/lsp_signature.nvim'
     use({
       'jose-elias-alvarez/null-ls.nvim',
       requires = { 'nvim-lua/plenary.nvim' }
     })
 
     -- cmp configuration --
-    use('hrsh7th/cmp-nvim-lsp')
-    use('hrsh7th/cmp-buffer')
-    use('hrsh7th/cmp-path')
-    use('hrsh7th/cmp-cmdline')
-    use('hrsh7th/nvim-cmp')
-    use('onsails/lspkind.nvim')
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'onsails/lspkind.nvim'
 
     -- Dart/Flutter configuration --
-   use('dart-lang/dart-vim-plugin')
-   use('thosakwe/vim-flutter')
-   use('natebosch/vim-lsc')
-   use('natebosch/vim-lsc-dart')
+    use 'dart-lang/dart-vim-plugin'
+    use 'thosakwe/vim-flutter'
+    use 'natebosch/vim-lsc'
+    use 'natebosch/vim-lsc-dart'
 
     --------------------------------------------
     -- Treesitter: Better syntax highlighting --
     --------------------------------------------
 
+    use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+    }
+
     ---------------
     -- Better UX --
     ---------------
 
-    use('numToStr/Comment.nvim')
+    -- use 'lvimuser/lsp-inlayhints.nvim'
+    use 'numToStr/Comment.nvim'
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
 
   end
 })
