@@ -62,7 +62,6 @@ return require('packer').startup({
     -- LSP, Formatting, Completions and Snippets --
     -----------------------------------------------
 
-    use 'github/copilot.vim'
     use 'neovim/nvim-lspconfig'
     use 'ray-x/lsp_signature.nvim'
     use({
